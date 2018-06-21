@@ -75,7 +75,7 @@ class DocumentViewerView(BrowserView):
             if not self.installed:
                 msg = _("Since you do not have docsplit installed on this "
                         "system, we can not render the pages of this document.")
-
+                utils.addPortalMessage(_(msg))
             if self.settings.converting is not None and \
                     self.settings.converting:
                 if self.settings.successfully_converted:
